@@ -1,0 +1,26 @@
+{
+  	"name": "Put url",
+  	"version": "1.0",
+  	"description": "Replace market text to link with text",
+  	"manifest_version": 2,
+  	"icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+  	"author": "fastinphp@gmail.com",
+  	"background": {
+      "scripts": ["background.js"],
+      "persistent": false
+	},
+	"permissions": ["contextMenus", "http://*/*", "https://*/*"],
+	"content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "all_frames": true
+    }
+  ]
+}
